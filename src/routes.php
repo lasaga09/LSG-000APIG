@@ -16,6 +16,7 @@ $app->group('/api/v1',function()use($app){
 
      $app->group('/general',function()use($app){
      $app->post('/reniec','App\Controllers\apiController:list');
+     $app->post('/test','App\Controllers\apiController:listtest');
     ;
     });
 	
