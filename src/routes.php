@@ -10,13 +10,13 @@ $app->get('/', function ($request, $response, $args) {
 $app->group('/api/v1',function()use($app){
    
     $app->group('/ubigeo',function()use($app){
-	$app->get('/distrito','App\Controllers\GeneralController:select_distrito');
+	   $app->get('/distrito','App\Controllers\GeneralController:select_distrito');
     ;
     });
 
      $app->group('/general',function()use($app){
-     $app->post('/reniec','App\Controllers\apiController:list');
-     $app->post('/test','App\Controllers\apiController:listtest');
+         $app->post('/reniec','App\Controllers\apiController:list');
+         $app->post('/money','App\Controllers\apiController:monedaletra');
     ;
     });
 	

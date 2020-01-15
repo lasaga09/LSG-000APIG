@@ -38,7 +38,10 @@ require __DIR__ . '/../src/dependencies.php';
 
 require __DIR__ . '/../App/Controllers/apiController.php';
 
+
+/*models*/
 require __DIR__ . '/../App/Models/Db.php';
+require __DIR__ . '/../App/Models/apiModel.php';
 
 // Register middleware
 require __DIR__ . '/../src/middleware.php';
