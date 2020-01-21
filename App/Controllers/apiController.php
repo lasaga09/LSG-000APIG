@@ -41,19 +41,26 @@ class apiController{
           if( $search1->success == true )
           {
             $rs = $search1->result;
+          }elseif($search2->success == true){
+
+          $dt = $search2->result;
+      
+          $rs = [
+            "dni"=>$dt->dni,
+            "nombres"=>$dt->nombre,
+            "apellidos"=>$dt->paterno ." ". $dt->materno
+          ];
+
           }else{
+
             $rs='0';
+          
           }
           
-         /* if( $search2->success == true )
-          {
-          $rs = $search2->result;
-          }*/
            
         }else{
             $rs='Content-Type invalid';
         }
-
   
     	return $this->response->withJson($rs);
     
